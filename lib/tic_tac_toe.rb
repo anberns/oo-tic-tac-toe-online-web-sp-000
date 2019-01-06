@@ -106,4 +106,21 @@ class TicTacToe
     is_draw
   end
   
+  # over?
+  def over?(board)
+    is_over = false 
+    if won?(board) || draw?(board) || full?(board)
+      is_over = true 
+    end
+    is_over
+  end
+  
+  # winner
+  def winner(board)
+    if won?(board)
+      return board[won?(board)[0]]
+    else
+      return nil 
+    end
+  end
 end
