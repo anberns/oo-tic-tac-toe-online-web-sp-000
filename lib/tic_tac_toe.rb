@@ -107,20 +107,21 @@ class TicTacToe
   end
   
   # over?
-  def over?(board)
+  def over?
     is_over = false 
-    if won?(board) || draw?(board) || full?(board)
+    if won? || draw? || full?
       is_over = true 
     end
     is_over
   end
   
   # winner
-  def winner(board)
-    if won?(board)
-      return board[won?(board)[0]]
+  def winner
+    if won?
+      return @board[won?[0]]
     else
       return nil 
     end
   end
+  
 end
