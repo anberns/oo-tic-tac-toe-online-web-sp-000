@@ -88,10 +88,11 @@ class TicTacToe
   end
   
   # full?
-  def full?(board)
-    is_full = board.all? do |el|
+  def full?
+    is_full = @board.all? do |el|
       el == "X" || el == "O"
     end
     is_full
   end
+  
 end
