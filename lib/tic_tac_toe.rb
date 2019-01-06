@@ -95,4 +95,14 @@ class TicTacToe
     is_full
   end
   
+  # draw?
+  def draw?(board)
+    is_draw = false 
+    
+    if full?(board) && !won?(board)
+      is_draw = true 
+    end
+    
+    is_draw
+  end
 end
